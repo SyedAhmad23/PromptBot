@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useSearchParams, useRouter } from "next/navigation";
 import { FiTrash2 } from "react-icons/fi";
-
+import Image from "next/image";
 export default function AiSearch() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -70,7 +70,11 @@ export default function AiSearch() {
     <div className="min-h-screen bg-gray-300 text-white flex justify-center items-start">
       <div className="w-full max-w-screen-md bg-gray-800 flex flex-col overflow-hidden h-[100vh] mx-auto shadow-lg rounded">
         <div className="w-full bg-gray-700 text-white text-xl font-semibold px-6 py-4 flex justify-between items-center">
-          <span>🤖 PromptBot</span>
+          <span className="inline-flex items-center gap-2">
+            <Image src="/pb.png" alt="PromptBot Logo" width={40} height={40} />
+            PromptBot
+          </span>
+
           <button
             onClick={handleClear}
             className="text-sm bg-red-600 hover:bg-red-700 px-3 py-1 rounded flex items-center gap-2"

@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PromptBot",
   description: "A simple AI prompt generator",
+  icons: {
+    icon: "/pb.png",
+    shortcut: "/pb.png",
+  },
 };
 
 export default function RootLayout({
